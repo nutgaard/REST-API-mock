@@ -1,0 +1,20 @@
+on:
+  push:
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build and Test
+        run: make test
+      - name: Publish (master-branch only)
+        uses: timo-reymann/docker-semantic-release-gh-action@v1
+        if: false # && github.ref == 'refs/heads/master'
+        with:
+          image: nutgaard/rest-api-mock
+          dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
+          dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
