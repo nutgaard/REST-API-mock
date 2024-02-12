@@ -6,10 +6,10 @@ jobs:
     name: "Build"
     runs-on: ubuntu-latest
     steps:
-      - name: Build image
-        uses: docker/build-push-action@v2
-        with:
-          push: false
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build and Test
+        run: make test
       - name: Publish (master-branch only)
         uses: timo-reymann/docker-semantic-release-gh-action@v1
         if: false # && github.ref == 'refs/heads/master'
