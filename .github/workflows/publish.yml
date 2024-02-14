@@ -14,10 +14,11 @@ jobs:
       - name: Build and Test
         run: make test
       - name: Publish (master-branch only)
-        uses: timo-reymann/docker-semantic-release-gh-action@v1
+        uses: timo-reymann/docker-semantic-release-gh-action@760812274ec424741b4348edfc00856c76601403
         if: github.ref == 'refs/heads/master'
         with:
           image: nutgaard/rest-api-mock
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
           dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
