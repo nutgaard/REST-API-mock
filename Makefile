@@ -8,6 +8,7 @@ test:
 	sleep 1
 	curl -sf 'http://localhost:8080/api/files' > /dev/null
 	curl -sf 'http://localhost:8080/api/files/index.json' > /dev/null
+	curl -sf 'http://localhost:8080/api/files/rnd-id' > /dev/null
 	curl -sf 'http://localhost:8080/bin/files' > /dev/null
 	echo "Test OK. Stopping image."
 	docker stop test-image || true
