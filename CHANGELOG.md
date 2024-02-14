@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/nutgaard/REST-API-mock/compare/1.0.1...1.0.2) (2024-02-14)
+
+
+### Bug Fixes
+
+* **auto-ext:** try to resolve files by injecting file extensions ([8f4c385](https://github.com/nutgaard/REST-API-mock/commit/8f4c3857be954916408109ee4444dbaa6851a7d8))
+
 ## [1.0.1](https://github.com/nutgaard/REST-API-mock/compare/1.0.0...1.0.1) (2024-02-14)
 
 
