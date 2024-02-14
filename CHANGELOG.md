@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/nutgaard/REST-API-mock/compare/1.0.0...1.0.1) (2024-02-14)
+
+
+### Bug Fixes
+
+* **platforms:** publish image to multiple platforms ([1e729cc](https://github.com/nutgaard/REST-API-mock/commit/1e729ccadc15eade1d6af3024eeb3d3ffc614db5))
+
 ## 1.0.0 (2024-02-12)
 
 
